@@ -1,0 +1,22 @@
+opam-version: "2.0"
+name: "bib"
+version: "0.1.0"
+         maintainter: ["Sam L. Thomas <st@non.servi.am>"]
+authors: ["Sam L. Thomas <st@non.servi.am>"]
+license: "MIT"
+homepage: "https://github.com/xorpse/bib"
+bug-reports: "https://github.com/xorpse/bib/issues"
+dev-repo: "git+ssh://git@github.com:xorpse/bib.git"
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "angstrom"
+  "dune"         {build}
+  "core_kernel"
+]
+synopsis: "A low-level library for handling BibTeX entries"
+description: """
+Bib is a low-level library providing a parser and core types for
+handling BibTeX entries.
+"""
